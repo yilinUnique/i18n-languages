@@ -1,9 +1,9 @@
 /**
  * @file
- * @author chensongyuan
+ * @author csy
  * @desc jquery.i18n
  * @date 2019-06-21
- * @last modified by chensongyuan
+ * @last modified by csy
  */
 /* eslint-disable*/ //do not use eslint to check the codes
 
