@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tab</title>
+
+</head>
+<body>
+    <section class="operate-tabs tabs-wrapper">
+        <h1 class="page-header" data-i18n="operate-tab-text">动态增加/删除tab栏</h1>
+        <!-- 查询tab -->
+        <div class="ul-wrapper row">
+            <ul class="nav nav-tabs nav-tabs-underline nav-tabs-lg query-tab min-tab tab-wrapper horizontal-list"
+                role="tablist">
+                <li role="presentation" class="active top-tab" data-index="1">
+                    <a href="#commonQueryItem1" role="tab" data-toggle="tab" class="linked-tag">
+                        <!-- <span>查询</span> -->
+                        <i id="" class="tab-number" data-i18n="tab-title-text">查询1</i>
+                        <i class="glyphicon glyphicon-remove remove-icon"
+                            onclick="removeOneTab(this,$.i18n('search-tab-text'),$('.markperson-content'),'markperson')"></i>
+                    </a>
+                </li>
+            </ul>
+            <button id="newTabAdd" type="button" class="squarebutton" title="新建"
+                onclick="addNewTab($.i18n('search-tab-text'),$('.markperson-content'),'markperson')">
+                <i class="glyphicon glyphicon-plus"></i>
+            </button>
+            <!-- 案件管理 有上一个 下一个 箭头 -->
+            <button id="turnToLast" type="button" class="squarebutton" title="上一个"
+                onclick="turnToLastTab($('.tabs-wrapper'))">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+            </button>
+            <button id="turnToNext" type="button" class="squarebutton" title="下一个"
+                onclick="turnToNextTab($('.tabs-wrapper'))">
+                <i class="glyphicon glyphicon-chevron-right"></i>
+            </button>
+        </div>
+        <!-- 查询tab对应的content -->
+        <div class="tab-content row">
+            <div role="tabpanel" class="tab-pane fade in active query-item" id="commonQueryItem1" content-index="1">
+                <p style="height: 100px;" id="newContent">Here is my new content...</p>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./tab.js"></script>
+<script src="./jquery-3.2.1.min.js"></script>
+<script src="./i18n_language.js"></script>
+<script>
+    updateText(doI18n);
+</script>
+</html>
